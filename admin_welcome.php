@@ -70,7 +70,7 @@ ob_end_flush();
 
 
                     if (mysqli_num_rows($result) > 0) {
-                        // output data of each row
+                      
 
                     echo '<span class="badge badge-danger">1 or more</span>';
                         
