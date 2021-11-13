@@ -1,4 +1,4 @@
-<? 
+<?php 
 session_start();
 include 'config.php';
 include 'header.php'; 
@@ -119,7 +119,9 @@ $sql = 'select *from leave_balance_of_employess  where Id='.$_SESSION['Id'].'';
 
 
 
- <?php include 'config.php';
+ <?php 
+ 
+ include 'config.php';
                     $sql = 'select *from attendance where Id='.$_SESSION['Id'].' and status="Annual_Leave"';
                     $result =  mysqli_query($conn, $sql);
 
@@ -132,7 +134,9 @@ else
  
  
  
- <?php include 'config.php';
+ <?php 
+ 
+ include 'config.php';
                     $sql = 'select *from attendance where Id='.$_SESSION['Id'].' and status="Sick_Leave"';
                     $result =  mysqli_query($conn, $sql);
 
