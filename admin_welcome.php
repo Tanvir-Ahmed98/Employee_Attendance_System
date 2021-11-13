@@ -18,7 +18,7 @@ session_start();
           <nav class="navbar navbar-toggleable-md navbar-light pt-0 pb-0 ">
               <?php
 
-if($_SESSION["name"]&& $_SESSION["role"]==1) {
+if($_SESSION["name"] && $_SESSION["role"]==1) {
 ?>
 Welcome <?php echo $_SESSION["name"]; ?> <a role="btn" class="btn btn-danger ml-10" href="logout.php" tite="Logout">Logout
 <?php
@@ -62,8 +62,8 @@ ob_end_flush();
       
       
       <?php 
+                  include 'config.php';
       
-     include 'config.php';
                     $sql = "select *from attendance where status='Annual_Leave'";
                     $result =  mysqli_query($conn, $sql);
 

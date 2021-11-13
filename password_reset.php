@@ -1,14 +1,17 @@
-<? 
-   
+<?php 
+
 session_start();
+
+
 ?>
 <html>
     <head>
-      <?  include 'header.php'; ?>
+      <?php  include 'header.php'; ?>
         </head>
         <body>
-            <div class="container" style="margin-top:200px">
- <form action="" method="post">
+        <form action="" method="post">
+            <div class="container" style="margin:150px">
+
         <div class="row">
             <div class="col">
                 

@@ -1,9 +1,12 @@
-<!Doctype html>
-<? 
-
-include 'check_session()';
-
+<?php 
+session_start();
+if(isset($_SESSION["name"]))
+{
+    header("Location:employee_welcome.php");
+}
 ?>
+
+<!Doctype html>
 <html>
 <head>
     <!-- bootstarap cdn -->

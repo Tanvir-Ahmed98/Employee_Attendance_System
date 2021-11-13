@@ -1,5 +1,13 @@
 
-<?php include 'config.php';  ?>
+<?php 
+
+include 'config.php'; 
+session_start();
+if(isset($_SESSION["name"]))
+{
+    header("Location:employee_welcome.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

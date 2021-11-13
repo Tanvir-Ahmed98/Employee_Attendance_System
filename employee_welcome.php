@@ -1,7 +1,8 @@
 <?php
-include 'config.php';
-ob_start();
+
 session_start();
+include 'config.php';
+include 'header.php';
 
 if($_SESSION["name"] && $_SESSION["role"]==3) {
 ?>
@@ -11,7 +12,7 @@ if($_SESSION["name"] && $_SESSION["role"]==3) {
 header ("location:login.php");
 ob_end_flush();
 ?>
-<a href="password_reset.php?&id=<? echo $_SESSION["Id"];  ?>" class="btn btn-danger">Reset Password</a>
+<a href='password_reset.php?&id=<? echo $_SESSION["Id"];  ?>' class="btn btn-danger">Reset Password</a>
 <!Doctype html>
 <html>
 <head>
