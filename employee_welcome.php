@@ -5,7 +5,7 @@ session_start();
 
 if($_SESSION["name"] && $_SESSION["role"]==3) {
 ?>
-Welcome <?php echo $_SESSION["name"]; ?>. Click here to <a href="logout.php" tite="Logout">Logout.</a>
+<strong>Logged in as</strong> <?php echo $_SESSION["name"]; ?> <a href="logout.php" role="btn" class="btn btn-danger" tite="Logout">Logout.</a>
 <?php
 }else 
 header ("location:login.php");
@@ -22,8 +22,8 @@ ob_end_flush();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="assets/style.css" />
 </head>
-<body >
-  
+<body style="background-color:Yellow">
+  <div style="margin:50px;border-radius:15px;background-color:White">
   <? include 'annual_leave.php'; ?>
   <div style="margin-left:1200px"><Button class="btn btn-primary rounded" type="submit" name="previous"><span class="glyphicon glyphicon-chevron-left"></span></Button>  <Button class="btn btn-primary" type="submit" name="next"><span class="glyphicon glyphicon-chevron-right"></span></Button></div>
   <?php
@@ -78,9 +78,18 @@ $blank = date('w', strtotime("{$year}-{$month}-01"));
        
     </tr>
 </table>
-
+</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

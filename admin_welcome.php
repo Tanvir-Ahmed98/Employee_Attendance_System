@@ -1,6 +1,5 @@
 <?php 
 session_start();
-ob_start();
 
 ?>
 <html>
@@ -62,7 +61,7 @@ ob_end_flush();
       
       
       
-      <? 
+      <?php 
       
      include 'config.php';
                     $sql = "select *from attendance where status='Annual_Leave'";

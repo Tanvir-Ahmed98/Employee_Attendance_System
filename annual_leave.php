@@ -4,7 +4,7 @@
 
 <body>
 
-   &nbsp; &nbsp; &nbsp;Annual Leave Balance:<?    $sql = 'select *from leave_balance_of_employess  where Id='.$_SESSION['Id'].'';
+   &nbsp; &nbsp; &nbsp;<strong style="font-size:25px">Annual Leave Balance:</strong><?    $sql = 'select *from leave_balance_of_employess  where Id='.$_SESSION['Id'].'';
                     $result =  mysqli_query($conn, $sql);
 
 
@@ -17,14 +17,14 @@
                         {
                             echo"annual bucket full!!";
                         }else
-                        echo $row['annual_leave_balance'];
+                        echo '<strong style="font-size:25px;color:red">'.$row['annual_leave_balance'].'</strong>';
                         
                     
-                    }else echo 1;
+                    }else echo'<strong style="font-size:25px;color:red"> 1</strong>';
                      ?>  
                      
                      
-      &nbsp; &nbsp; &nbsp;Sick Leave Balance:<?    $sql = 'select *from leave_balance_of_employess  where Id='.$_SESSION['Id'].'';
+      &nbsp; &nbsp; &nbsp;<strong style="font-size:25px">Sick Leave Balance:</strong><?    $sql = 'select *from leave_balance_of_employess  where Id='.$_SESSION['Id'].'';
                     $result =  mysqli_query($conn, $sql);
 
 
@@ -34,10 +34,10 @@
                        $row = mysqli_fetch_assoc($result); 
                         
                         
-                        echo $row['sick_leave_balance'];
+                        echo '<strong style="font-size:25px;color:red">'.$row['sick_leave_balance'].'</strong>';
                         
                     
-                    }else echo 5;
+                    }else echo  '<strong style="font-size:25px;color:red">5</strong>';
                      ?> 
                      </body>
                      </html>
