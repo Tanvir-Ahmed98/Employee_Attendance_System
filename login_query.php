@@ -2,7 +2,6 @@
 
 session_start();
 include "config.php";
-
 if(isset($_SESSION["name"]))
 {
     header("Location:employee_welcome.php");
@@ -24,6 +23,8 @@ if (count($_POST) > 0) {
          $_SESSION["passcode"]= $row["passcode"];
         
     } else {
+        $error="<div class='alert alert-danger' role='alert'>Invalid credentials</div>";
+        header("Location:login.php?m=$error");
         // $message = "Invalid Username or Password!";
     }
 }
@@ -42,7 +43,4 @@ if (isset($_SESSION["name"])&& $_SESSION["role"]==3) {
 }
  
 
-
-
 ?>
-<center><h1><a href="login.php">Incorrect password Press to Go back and try again</a></h1></center>

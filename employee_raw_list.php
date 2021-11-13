@@ -1,4 +1,4 @@
-<? include 'header.php'; ?>
+<?php include 'header.php'; ?>
  <table class="table table-dark table-hover ">
                 <thead>
                     <tr>
@@ -38,7 +38,7 @@
                                     <?php echo    $row["email"]; ?>
                                 </td>
                                 <td>
-                                  <a href="password_reset.php?&id=<? echo $_SESSION["Id"];  ?>" class="btn btn-danger">Reset Password</a>
+                                  <a href='password_reset.php?&id=<? echo $_SESSION["Id"];  ?>' class="btn btn-danger">Reset Password</a>
                                 </td>
                             
                                     

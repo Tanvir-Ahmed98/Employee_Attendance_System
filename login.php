@@ -4,6 +4,7 @@ if(isset($_SESSION["name"]))
 {
     header("Location:employee_welcome.php");
 }
+
 ?>
 
 <!Doctype html>
@@ -25,9 +26,12 @@ if(isset($_SESSION["name"]))
 
             <form name="frmUser" method="post" action="login_query.php" class="was-validated">
           
-                <div class="message"><? if ($message != "") {
-                                            echo $message;
-                                        } ?></div>
+         <?php   if(isset($_GET["m"]))
+    {
+        echo $_GET["m"];
+        header("Refresh:3; url=login.php");
+    }
+    ?>
                 <h4>Enter Login Details</h4>
                 <div class="form-group mb-3">
 

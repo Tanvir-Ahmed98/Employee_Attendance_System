@@ -22,8 +22,9 @@ if($_SESSION["name"] && $_SESSION["role"]==1) {
 ?>
 Welcome <?php echo $_SESSION["name"]; ?> <a role="btn" class="btn btn-danger ml-10" href="logout.php" tite="Logout">Logout
 <?php
-}else header ("location:login.php");
-ob_end_flush();
+}else 
+header ("location:login.php");
+
 ?>
         
             <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
@@ -78,9 +79,6 @@ ob_end_flush();
                          echo '<span class="badge badge-danger">0</span>';
                     }
                     
-      
-      
-      
       
       
       ?>
